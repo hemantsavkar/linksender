@@ -1,0 +1,61 @@
+<ion-view view-title="Dashboard">
+    <ion-content class="padding">
+                    
+        <div class="row" ng-repeat="call in calldata">
+            
+                <div class="row">
+                    <div class="col col-30 col-offset-10">Name</div>
+                    <div class="col">{{call.cachedName}}</div>
+                </div>
+                <div class="row">
+                    <div class="col col-30 col-offset-10">Number</div>
+                    <div class="col">{{call.number}}</div>
+                </div>
+                <div class="row">
+                    <div class="col col-30 col-offset-10">Type</div>
+                    <div class="col">{{callTypeDisplay(call.type)}}</div>
+                </div>
+                <div class="row">
+                    <div class="col col-30 col-offset-10">Date</div>
+                    <div class="col">{{call.date | date}}</div>
+                </div>
+                <div class="row">
+                    <div class="col col-30 col-offset-10">Duration</div>
+                    <div class="col">{{call.duration}} seconds</div>
+                </div>
+                <div class="row">
+                    <div class="col col-30 col-offset-10">Acknowledged</div>
+                    <div class="col">{{(call.new == 1 ? 'yes' : 'no')}}</div>
+                </div>
+            <div class="row">
+
+
+
+                <!--
+    <div class="list card">
+      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-body">
+        <div>
+          There is a fire in <b>sector 3</b>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Health</div>
+      <div class="item item-body">
+        <div>
+          You ate an apple today!
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Upcoming</div>
+      <div class="item item-body">
+        <div>
+          You have <b>29</b> meetings on your calendar tomorrow.
+        </div>
+      </div>
+    </div>
+-->
+    </ion-content>
+</ion-view>
