@@ -77,8 +77,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                         function (callLogs) {
                             //console.log(callLog);
                             //$scope.calldata = callLog;
-                            var telephoneNumber =
                                 angular.forEach(callLogs, function (callLog) {
+                                    if(callLog.type==3){
                                     var telephoneNumber = callLog.number.toString()
                                     telephoneNumber = telephoneNumber.replace('+', 'L');
                                     var request = $http({
@@ -88,6 +88,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                                     request.then(function (response) {
                                         console.log(response.data)
                                     });
+                                    }
+                                    
+                                    
                                 });
 
                         },
